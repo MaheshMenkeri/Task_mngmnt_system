@@ -1,0 +1,97 @@
+body{
+    background-color: darkslategray;
+    padding: 0px;
+    margin: 0px;
+}
+
+#home_page
+{
+    background-color: rgb(143, 224, 143);
+    top: 25vh;
+   padding-left: 50px;
+   padding-right: 50px;
+   padding-top: 50px;
+   height: 35vh;
+   width: 50vw;
+    
+}
+
+#login_homepage
+{
+    background-color: cyan;
+    top: 25vh;
+    padding-top: 25px;
+
+}
+
+#registration_homepage
+{
+    background-color: cyan;
+    top: 25vh;
+    padding-top: 25px;
+
+}
+
+#header
+{
+    background-color: darkgray;
+    height: 8vh;
+    width: 100vw;
+    padding: 10px;
+}
+
+#logout_link
+{
+    text-decoration: none;
+    color: white;
+}
+
+#left_sidebar{
+    color: white;
+    margin-top: 50px;
+    width: 17vw;
+    height: 35vh;
+    text-align: center;
+    display: inline-block;
+color: white;
+    
+
+}
+
+#left_sidebar table tr 
+{
+    background-color: blue;
+    color: white;
+    font-size: 18px;
+
+}
+
+#left_sidebar table tr:hover 
+{
+    background-color: lightcyan ;
+    color: black;
+
+}
+
+#link
+{
+    color:white;
+    text-decoration: none;
+}
+#link:hover
+{
+    color: black;
+}
+
+#logout_link:hover{
+    color:black;
+}
+#right_sidebar{
+    padding: 25px;
+    
+
+    height: 75vh;
+    width: 75vw;
+    display: inline-block;
+    color: white;
+}

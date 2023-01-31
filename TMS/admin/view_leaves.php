@@ -1,0 +1,66 @@
+<?php
+ include("../con_db.php");
+?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   </head>
+<body>
+    <h2>view leave page</h2>
+    <center>
+        <h3>All the leave applications</h3> <br>
+        <table class="table" style="background-color:whitesmoke;width:75vw;">
+        <tr>
+            <th>S.no</th>
+            <th>user</th>
+            <th>subject</th>
+            <th>message</th>
+            <th>status</th>
+            <th>Action</th>
+        </tr>
+
+        <?php
+       
+        $sno=1;
+        $query = "select * from leaves";
+        $query_run = mysqli_query($connection , $query);
+        while($row = mysqli_fetch_assoc($query_run))
+        {
+            ?>
+            <tr>
+            <td><?php echo $sno; ?></td>
+
+         <?php
+            $query1 = "select name from users  where uid = $row[uid]";
+            $query_run1 = mysqli_query($connection, $query1);
+            while($row1 = mysqli_fetch_assoc($query_run1))
+            {
+         ?>
+
+                <td> <?php echo $row1['name'] ; ?> </td>
+                
+                <?php
+            }
+            ?>
+
+              
+            <td><?php echo $row['subject']; ?></td>
+            <td><?php echo $row['message']; ?></td>
+            <td><?php echo $row['status']; ?></td>
+            <td> <a href="approve_leaves.php>id=<?php echo $row['lid'] ; ?>">Approve</a> |
+             <a href="reject_leaves.php>id=<?php echo $row['lid']; ?>">Reject</a></td>
+            </tr>
+           
+
+            <?php
+             $sno = $sno +1;
+        }
+
+
+        ?>
+
+        </table>
+    </center>
+    
+</body>
+</html>
